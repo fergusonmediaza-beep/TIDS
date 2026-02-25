@@ -1430,3 +1430,7 @@ p {
     grid-template-columns: 1fr;
   }
 }
+
+.main-nav a.nav-cta.active {
+  color: var(--white);
+}
