@@ -266,7 +266,7 @@ p {
   border-bottom-color: var(--gold);
 }
 
-.main-nav .nav-cta {
+.main-nav a.nav-cta {
   background-color: var(--teal-deep);
   color: var(--white);
   padding: 10px 20px;
@@ -275,9 +275,10 @@ p {
   transition: background var(--transition);
 }
 
-.main-nav .nav-cta:hover {
+.main-nav a.nav-cta:hover {
   background-color: var(--blue-teal);
   border-bottom-color: transparent;
+  color: var(--white);
 }
 
 /* Hamburger */
@@ -362,10 +363,11 @@ p {
   max-width: var(--max-width);
   margin: 32px auto 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   font-size: 0.82rem;
-  color: rgba(255,255,255,0.4);
+  color: #e0e8e8;
 }
 
 .compliance-badge {
