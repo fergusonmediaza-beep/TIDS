@@ -1434,3 +1434,26 @@ p {
 .main-nav a.nav-cta.active {
   color: var(--white);
 }
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  transition: background 0.2s, color 0.2s;
+}
+
+.footer-socials a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
