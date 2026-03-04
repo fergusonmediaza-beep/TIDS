@@ -1731,12 +1731,12 @@ p {
 
 /* ============================================================
    SEA WISER — Featured Innovation Section
-   Add this to the bottom of styles.css
+   Paste at the bottom of styles.css, replacing the old Sea Wiser block
    ============================================================ */
 
 .seawiser-section {
   background: var(--text-main);
-  padding: 0 0 80px;
+  padding: 0 0 88px;
   position: relative;
   overflow: hidden;
 }
@@ -1744,12 +1744,12 @@ p {
 .seawiser-section::before {
   content: '';
   position: absolute;
-  top: -120px;
-  right: -120px;
-  width: 500px;
-  height: 500px;
+  top: -160px;
+  right: -160px;
+  width: 560px;
+  height: 560px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(200,156,42,0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(200,156,42,0.05) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -1760,80 +1760,80 @@ p {
   justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
-  background: rgba(200,156,42,0.12);
-  border-bottom: 1px solid rgba(200,156,42,0.2);
+  background: rgba(200,156,42,0.1);
+  border-bottom: 1px solid rgba(200,156,42,0.18);
   padding: 14px 24px;
   margin-bottom: 64px;
 }
 
 .sw-badge {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--gold);
   padding: 5px 14px;
-  border: 1px solid rgba(200,156,42,0.35);
+  border: 1px solid rgba(200,156,42,0.3);
   border-radius: 2px;
 }
 
-/* ── Main two-column grid ── */
+/* Main two-column grid */
 .seawiser-inner {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 24px;
   display: grid;
-  grid-template-columns: 1fr 340px;
+  grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: start;
 }
 
-/* ── Left: content ── */
+/* ── LEFT: content ── */
 .seawiser-content .section-label { color: var(--gold); }
 .seawiser-content h2 { color: var(--white); }
 .seawiser-content > p {
-  color: rgba(255,255,255,0.75);
-  font-size: 0.97rem;
+  color: rgba(255,255,255,0.72);
+  font-size: 0.96rem;
   margin-top: 20px;
   margin-bottom: 0;
-  max-width: 64ch;
+  max-width: 62ch;
 }
 .seawiser-content .divider { background: var(--gold); }
 
-/* Features grid — 3 columns */
+/* Features grid */
 .seawiser-features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin: 32px 0;
+  gap: 12px;
+  margin: 28px 0;
 }
 
 .sw-feature {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 18px;
-  background: rgba(255,255,255,0.04);
+  gap: 8px;
+  padding: 16px;
+  background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 2px;
+  border-radius: 4px;
   transition: background 0.2s, border-color 0.2s;
 }
 
 .sw-feature:hover {
-  background: rgba(255,255,255,0.07);
-  border-color: rgba(200,156,42,0.25);
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(200,156,42,0.2);
 }
 
 .sw-feature--highlight {
-  border-color: rgba(200,156,42,0.3);
-  background: rgba(200,156,42,0.07);
+  border-color: rgba(200,156,42,0.28);
+  background: rgba(200,156,42,0.06);
 }
 
 .sw-feature-icon {
-  width: 38px;
-  height: 38px;
-  background: rgba(200,156,42,0.15);
-  border-radius: 2px;
+  width: 34px;
+  height: 34px;
+  background: rgba(200,156,42,0.13);
+  border-radius: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1843,7 +1843,7 @@ p {
 
 .sw-feature h4 {
   color: var(--white);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-family: var(--font-body);
   font-weight: 700;
   margin: 0;
@@ -1851,107 +1851,149 @@ p {
 }
 
 .sw-feature p {
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.55);
+  font-size: 0.77rem;
+  color: rgba(255,255,255,0.5);
   line-height: 1.5;
   max-width: none;
   margin: 0;
 }
 
-/* ── Right: video column ── */
+/* ─────────────────────────────────────────
+   RIGHT: side-by-side videos
+   ───────────────────────────────────────── */
+
 .seawiser-media {
   position: sticky;
-  top: 100px;
+  top: 90px;
+}
+
+/* The row that holds both video cards + the divider */
+.sw-videos-wrapper {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+
+/* Each video card — equal flex halves */
+.sw-vid-card {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  gap: 0;
 }
 
-.seawiser-video-wrap {
-  position: relative;
-  background: #000;
-  border-radius: 2px;
-  overflow: hidden;
-  border: 1px solid rgba(200,156,42,0.3);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.6);
-  width: 100%;
-}
-
-.seawiser-video-label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
-  color: rgba(255,255,255,0.85);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 12px 14px;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.seawiser-video-label svg { color: var(--gold); }
-
-/* Portrait iframe for YouTube Shorts */
-.seawiser-video-wrap iframe {
-  display: block;
-  width: 100%;
-  aspect-ratio: 9 / 16;
-  border: none;
-}
-
-.seawiser-video-caption {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  margin-top: 12px;
-  font-size: 0.75rem;
-  color: rgba(255,255,255,0.35);
-  line-height: 1.5;
-}
-
-.seawiser-video-caption svg {
+/* Thin vertical gold divider */
+.sw-vid-divider {
+  width: 1px;
+  background: rgba(200,156,42,0.25);
+  margin: 0 20px;
   flex-shrink: 0;
-  margin-top: 2px;
+}
+
+/* Label above each video */
+.sw-vid-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--gold);
-  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+.sw-vid-label svg { flex-shrink: 0; }
+
+/* 16:9 embed container */
+.sw-vid-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 10px 36px rgba(0,0,0,0.55);
+  border: 1px solid rgba(200,156,42,0.2);
+}
+
+.sw-vid-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* Description card below each video */
+.sw-vid-desc {
+  margin-top: 16px;
+  padding: 16px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 4px;
+  flex: 1; /* equal height descriptions */
+}
+
+.sw-vid-desc h5 {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 8px;
+}
+
+.sw-vid-desc p {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+  margin: 0;
+  max-width: none;
+}
+
+/* Centred CTA below videos */
+.sw-videos-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
 }
 
 /* ── Responsive ── */
-@media (max-width: 1024px) {
-  .seawiser-inner {
-    grid-template-columns: 1fr 280px;
-    gap: 40px;
-  }
-  .seawiser-features-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .seawiser-section { padding-bottom: 56px; }
+@media (max-width: 1100px) {
   .seawiser-inner {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 48px;
   }
-  .seawiser-media {
-    position: static;
-    align-items: center;
+  .seawiser-media { position: static; }
+}
+
+@media (max-width: 640px) {
+  .seawiser-section { padding-bottom: 56px; }
+
+  /* Stack videos on small screens */
+  .sw-videos-wrapper {
+    flex-direction: column;
+    gap: 32px;
   }
-  .seawiser-video-wrap {
-    max-width: 320px;
+
+  .sw-vid-divider {
     width: 100%;
+    height: 1px;
+    margin: 0;
   }
+
   .seawiser-features-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .seawiser-badge-strip { gap: 8px; margin-bottom: 40px; }
+
+  .seawiser-badge-strip {
+    gap: 8px;
+    margin-bottom: 40px;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 420px) {
   .seawiser-features-grid { grid-template-columns: 1fr; }
 }
