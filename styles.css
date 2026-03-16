@@ -1736,7 +1736,7 @@ p {
 
 .seawiser-section {
   background: var(--text-main);
-  padding: 0 0 88px;
+  padding: 80px 0 88px;
   position: relative;
   overflow: hidden;
 }
@@ -1755,7 +1755,7 @@ p {
 
 /* Badge strip */
 .seawiser-badge-strip {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   gap: 16px;
@@ -1764,8 +1764,8 @@ p {
   border-bottom: 1px solid rgba(200,156,42,0.18);
   padding: 14px 24px;
   margin-bottom: 64px;
+  
 }
-
 .sw-badge {
   font-size: 0.7rem;
   font-weight: 700;
